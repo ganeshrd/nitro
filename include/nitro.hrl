@@ -1,7 +1,7 @@
 -ifndef(NITRO_HRL).
 -define(NITRO_HRL, true).
 
--define(CTX, (get(context))).
+%-define(CTX, (get(context))).
 
 -define(DEFAULT_BASE, {?ELEMENT_BASE(undefined)}).
 -define(DEFAULT_BASE_TAG(Tag), {?ELEMENT_BASE(undefined,Tag,undefined)}).
