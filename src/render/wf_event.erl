@@ -15,6 +15,7 @@ new(P,E,D,N,Data,Source) -> new(P,E,D,N,Data,Source,<<>>).
 new(bin,Data) -> <<"ws.send(enc(tuple(atom('bin'),bin('",(nitro:pickle(Data))/binary,"'))));">>.
 new(undefined, _, _, _, _, _, _) -> <<>>;
 new(Postback, Element, Delegate, Name, Data, Source, Validation) ->
+    wf:info(?MODULE,"CTX#cx.module: ~p~n",[?CTX#cx.module]),
     Module = nitro:coalesce([Delegate, ?CTX#cx.module]),
     Join=fun([]) -> [];
            ([E]) -> [$'|E]++[$'];
