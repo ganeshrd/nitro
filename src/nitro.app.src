@@ -1,7 +1,7 @@
 {application, nitro, [
     {description,  "NITRO HTML5 DSL"},
     {vsn,          "1.4.0"},
-    {applications, [kernel, stdlib]},
+    {applications, [kernel, stdlib, n2o]},
     {modules, []},
     {registered,   []},
     {mod, { nitro, []}},
